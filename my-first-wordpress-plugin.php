@@ -16,6 +16,9 @@ Version: 1.0
 $mfwp_prefix = 'mfwp_';
 $mfwp_plugin_name = 'My First WordPress Plugin';
 
+// retrieve our plugin settings from the options table
+$mfwp_options = get_option('mfwp_settings');
+
 /******************************
 * includes
 ******************************/
