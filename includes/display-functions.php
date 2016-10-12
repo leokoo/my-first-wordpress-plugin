@@ -4,8 +4,8 @@
 
 function mfwp_add_content($content) {
 
-	if(is_single()) {
-		$extra_content = ' This is my extra content';
+	if(is_singular()) {
+		$extra_content = '<p class="twitter-message">Follow me on <a href="http://twitter.com/pippinsplugins">Twitter</a></p>';
 		$content .= $extra_content;
 	}
 	return $content;
