@@ -4,8 +4,10 @@
 
 function mfwp_add_content($content) {
 
-	if(is_singular()) {
-		$extra_content = '<p class="twitter-message">Follow me on <a href="http://twitter.com/pippinsplugins">Twitter</a></p>';
+	global $mfwp_options;
+
+	if(is_singular() && $mfwp_options['enable'] == true) {
+		$extra_content = '<p class="twitter-message ' . $mfwp_options['theme'] . '">Follow me on <a href="' . $mfwp_options['twitter_url'] . '">Twitter</a></p>';
 		$content .= $extra_content;
 	}
 	return $content;
